@@ -19,7 +19,7 @@
     <link rel="stylesheet" type="text/css " href= "{% static 'webapp/style.css'%}">
     <title>organiser le formulaire de sorte à avoir plusieurs categories</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-buttons-bs/2.2.0/buttons.bootstrap.min.js" integrity="sha512-q16bwwxHypOj331sH082m1caiMj5d2eZxGqk0ytNHzNovIUTv78bOI5xq3PerSwTKZnBoTAmct8gZfNQVcDYiA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <h1> PERSONEL</h1>
+ 
 
 </head>
 <div>
@@ -62,11 +62,11 @@
   <!--Partie1-->
   <div class="container">
     <div class="title-box">
-        <h1>INSCRIPTION</h1><br>
-        <h4>inscription aux cours de mr Aboubakar Demba</h4>
+        <h1>BULLETIN DE NOTE</h1><br>
+        
     </div><br>
     <div class="content-box">
-        <h2>Enseignant</h2>
+        <h2>Etudiant</h2>
         <ul>
             {% for etudiant in etudiants %}
                 <li>
@@ -83,11 +83,12 @@
         </ul>
     </div>
     <div class="content-box">
-        <h2>Cours</h2>
+        <h2> Cours</h2>
         <ul>
             {% for cours in cours %}
                 <li>
                     <strong>{{ cours.titre }}</strong><br>
+                    Note :  {{ cours.note }}/20<br>
                     URL : www. <a href="{{ cours.url }}" target="_blank">{{ cours.url }}</a><br>
                     Description : {{ cours.description }}<br>
                     Étudiant : {{ cours.etudiant.nom }}
@@ -103,7 +104,7 @@
           <div class="col my-col">
             <form action="#" method="POST" style="margin-top: 150px; ">
               <hr/>
-              <h3>Etudiant veillez vous enregistrer pour vous inscrire aux cours de mr Aboubakar Demba</h3>
+              <h3> veillez vous enregistrer Pour une reclamation</h3>
               <hr/>
               <form action="#" method="POST"> 
               <label for="firstname">Nom : </label>
@@ -119,14 +120,14 @@
             <label for="email">e-mail : </label>
             <input type="email" name="email" id="e-mail" alt="e-email" placeholder="ccnb36@gmail.ca"/><br><br>
              <fieldset> 
-              <label for="fonction"> Nos services : </label>
+              <label for="fonction"> Cours : </label>
               <select name="fonction">
                   <option value="ido1" selected></option>
-                  <option value="ido2"> Formation</option>
-                  <option value="ido3">Placement pour emplois </option>
+                  <option value="ido2"> Programmation</option>
+                  <option value="ido3">Analyse des donner </option>
               </select> 
               </fieldset>
-             <label for="message">Message   :</label><br>
+             <label for="message">Reclamation  :</label><br>
               <textarea name="text" ></textarea>
               <br>
              <button alt="button" >Envoyer</button>

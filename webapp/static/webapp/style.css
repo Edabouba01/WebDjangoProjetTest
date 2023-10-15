@@ -10,6 +10,7 @@ h1{
     padding-top: 30px; ;
     
 }
+#title-box{ text-align: center;}
 p{
     margin: auto;
     width: 100px;
@@ -42,10 +43,4 @@ input{
     text-align-last: auto;
     color: hsl(hue, saturation, lightness);
 }
-label{
-    color-adjust:#d30808;
-    
-}
-fieldset{
-
-}
+body{top: auto;}
