@@ -28,16 +28,7 @@ h2{
     
     padding-top: 30px;
 }
-h3{
-    color: rgb(112, 24, 24);
-    text-decoration-color: hsl(hue, saturation, lightness);
-    text-align: justify;
-    display: inline;
-    margin: auto;
-    width: 100px;
-    border-color: rgb(17, 119, 48);
-    padding-top: 30px; ;
-}
+
 input{
     background-color: rgb(206, 212, 150);
     text-align-last: auto;

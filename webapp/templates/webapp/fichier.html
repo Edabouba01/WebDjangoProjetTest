@@ -78,7 +78,7 @@
 
                 </li>
             {% empty %}
-                <p>Aucun Enseignant n'est disponible.</p>
+                <p>Aucun Et n'est disponible.</p>
             {% endfor %}
         </ul>
     </div>
@@ -94,12 +94,13 @@
                     Étudiant : {{ cours.etudiant.nom }}
                 </li>
             {% empty %}
-                <p>Aucun cours n'est disponible.</p>
+                <p>Aucune n'est disponible.</p>
             {% endfor %}
         </ul>
     </div>
 </div>
 <!--Partie 2--> 
+<div class="container my-container">
       <div class="row justify-content-center my-row">
           <div class="col my-col">
             <form action="#" method="POST" style="margin-top: 150px; ">
@@ -111,7 +112,8 @@
               <input type="text" name="text" id="firstname" placeholder="Entre votre nom"/><br><br>
               <label for="lastname">Prenoms : </label>
               <input type="text" name="usernam" id="lastname" placeholder="Entre votre Prenoms"/><br><br>
-  
+              <label for="Matricule">Matricule : </label>
+              <input type="text" name="usernam" id="lmatricule" placeholder="Entre votre Matricule"/><br><br>
               <label for="sexe">Genre : </label>
               <input type="radio" name="sexe" value="homme" checked/>Homme
              <input type="radio" name="sexe" value="femme"/>Femme
@@ -143,7 +145,7 @@
     </select>
 
     
-    <div class="container my-container">
+
       
        
       
