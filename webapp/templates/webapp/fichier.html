@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" type="text/css " href= "{% static 'webapp/style.css'%}">
+    <title>organiser le formulaire de sorte à avoir plusieurs categories</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-buttons-bs/2.2.0/buttons.bootstrap.min.js" integrity="sha512-q16bwwxHypOj331sH082m1caiMj5d2eZxGqk0ytNHzNovIUTv78bOI5xq3PerSwTKZnBoTAmct8gZfNQVcDYiA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <h1> PERSONEL</h1>
+
+</head>
+<div>
+<body>
+  <!--Navigateur-->
+  <div class="row my-row">
+    <div class="col my-col">
+      <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
+        
+        <span class="navbar-text"> -Projet django Test1 </td></span>
+        <div class="collapse navbar-collapse"></div>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" 
+              ><i class="fas fa-home"></i> Accueil</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+              ><i class="fas fa-handshake"></i> Nos services</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" 
+              ><i class="fas fa-users"></i> Notre equipe</a
+            >
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" 
+              ><i class="fas fa-address-book"></i> Nous contacter</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div><br><br>
+  
+  <br><br>
+
+  <!--Partie1-->
+  <div class="container">
+    <div class="title-box">
+        <h1>INSCRIPTION</h1><br>
+        <h4>inscription aux cours de mr Aboubakar Demba</h4>
+    </div><br>
+    <div class="content-box">
+        <h2>Enseignant</h2>
+        <ul>
+            {% for etudiant in etudiants %}
+                <li>
+                    <strong>Nom  :{{ etudiant.nom }}</strong><br>
+                    Date de debut : {{ etudiant.date_naissance }}<br>
+                    Adresse mail :  {{ etudiant.email }}<br>
+                    Numero  : {{ etudiant.phone }}<br>
+                    Matricule : {{ etudiant.matricule }}<br>
+
+                </li>
+            {% empty %}
+                <p>Aucun Enseignant n'est disponible.</p>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="content-box">
+        <h2>Cours</h2>
+        <ul>
+            {% for cours in cours %}
+                <li>
+                    <strong>{{ cours.titre }}</strong><br>
+                    URL : www. <a href="{{ cours.url }}" target="_blank">{{ cours.url }}</a><br>
+                    Description : {{ cours.description }}<br>
+                    Étudiant : {{ cours.etudiant.nom }}
+                </li>
+            {% empty %}
+                <p>Aucun cours n'est disponible.</p>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+<!--Partie 2--> 
+      <div class="row justify-content-center my-row">
+          <div class="col my-col">
+            <form action="#" method="POST" style="margin-top: 150px; ">
+              <hr/>
+              <h3>Etudiant veillez vous enregistrer pour vous inscrire aux cours de mr Aboubakar Demba</h3>
+              <hr/>
+              <form action="#" method="POST"> 
+              <label for="firstname">Nom : </label>
+              <input type="text" name="text" id="firstname" placeholder="Entre votre nom"/><br><br>
+              <label for="lastname">Prenoms : </label>
+              <input type="text" name="usernam" id="lastname" placeholder="Entre votre Prenoms"/><br><br>
+  
+              <label for="sexe">Genre : </label>
+              <input type="radio" name="sexe" value="homme" checked/>Homme
+             <input type="radio" name="sexe" value="femme"/>Femme
+             <br><br> 
+  
+            <label for="email">e-mail : </label>
+            <input type="email" name="email" id="e-mail" alt="e-email" placeholder="ccnb36@gmail.ca"/><br><br>
+             <fieldset> 
+              <label for="fonction"> Nos services : </label>
+              <select name="fonction">
+                  <option value="ido1" selected></option>
+                  <option value="ido2"> Formation</option>
+                  <option value="ido3">Placement pour emplois </option>
+              </select> 
+              </fieldset>
+             <label for="message">Message   :</label><br>
+              <textarea name="text" ></textarea>
+              <br>
+             <button alt="button" >Envoyer</button>
+             <button alt="button">Annuler</button>
+            </form>
+          </div>
+        </div>
+       
+       
+      </div>
+   
+
+    </select>
+
+    
+    <div class="container my-container">
+      
+       
+      
+</div>
+
+</body>
+</html>

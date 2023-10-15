@@ -1,0 +1,51 @@
+h1{
+    color: rgb(155, 11, 11);
+    text-size-adjust: 50px;
+    text-decoration-color: hsl(hue, saturation, lightness);
+    
+    display: inline;
+    margin: auto;
+    width: 100px;
+    
+    padding-top: 30px; ;
+    
+}
+p{
+    margin: auto;
+    width: 100px;
+    border-color: rgba(161, 10, 175, 0.74);
+    padding: top 30px; ;
+
+}
+h2{
+    color: rgb(100, 29, 16);
+    text-decoration-color: hsl(hue, saturation, lightness);
+    
+    display: inline;
+    margin: auto;
+    width: 100px;
+    
+    padding-top: 30px;
+}
+h3{
+    color: rgb(112, 24, 24);
+    text-decoration-color: hsl(hue, saturation, lightness);
+    text-align: justify;
+    display: inline;
+    margin: auto;
+    width: 100px;
+    border-color: rgb(17, 119, 48);
+    padding-top: 30px; ;
+}
+input{
+    background-color: rgb(206, 212, 150);
+    text-align-last: auto;
+    color: hsl(hue, saturation, lightness);
+}
+label{
+    color-adjust:#d30808;
+    
+}
+fieldset{
+
+}
